@@ -25,11 +25,13 @@ kill:
 	fi
 
 lint:
-	poetry run ruff check src tests
+	poetry run ruff check src tests notebooks
+	poetry run ruff format --check src tests notebooks
 
 lint-fix:
-	poetry run ruff check --fix src tests
-	poetry run ruff format src tests
+	poetry run ruff check --fix src tests notebooks || true
+	poetry run ruff format src tests notebooks
+	poetry run ruff check src tests notebooks
 
 typecheck:
 	poetry run pyright

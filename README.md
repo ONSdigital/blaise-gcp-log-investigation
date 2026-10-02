@@ -29,9 +29,8 @@ Python Jupyter Notebook for GCP log investigation.
 
 ## Testing
 
-- Run `make test` to execute tests.
-- Coverage is enforced at 100% for the `helpers` package under `src/`.
-- Notebook files are not part of test coverage because coverage is scoped to `helpers`.
+- Run `make test` to run tests and report coverage.
+- The coverage report omits test files, notebooks are not measured.
 
 ## Current Notebooks
 
